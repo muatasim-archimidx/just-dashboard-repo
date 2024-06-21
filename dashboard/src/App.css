@@ -1,0 +1,208 @@
+:root {
+  --toggle-bg: #4b5563;
+  --toggle-thumb-light: #fff;
+  --toggle-thumb-dark: #000;
+}
+
+body {
+  background-color: #1f2937; /* bg-gray-800 */
+  color: #fff; /* text-white */
+  font-family: sans-serif; /* font-sans */
+}
+
+body.dark {
+  background-color: #e5e7eb; /* dark:bg-gray-200 */
+  color: #000; /* dark:text-black */
+}
+
+.flex {
+  display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 80px; /* w-20 */
+  height: 100vh; /* h-screen */
+  background-color: #1c1c1e; /* bg-gray-900 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0; /* py-5 */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar .icon {
+  color: #0bcad4; /* text-cyan-400 */
+  font-size: 24px; /* text-2xl */
+  margin-bottom: 20px; /* mb-5 */
+  cursor: pointer;
+}
+
+body.dark .sidebar {
+  background-color: #d1d5db; /* dark:bg-gray-300 */
+}
+
+body.dark .sidebar .icon {
+  color: #08989b; /* dark:text-cyan-600 */
+}
+
+.main-content {
+  margin-left: 80px; /* ml-20 */
+  flex: 1;
+  padding: 20px; /* p-5 */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1e; /* bg-gray-900 */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-bottom: 1px solid #374151; /* border-b border-gray-700 */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px; /* Adjust logo size as needed */
+  height: 40px;
+  margin-right: 10px; /* Adjust spacing between logo and title */
+}
+
+.header-title {
+  font-size: 24px; /* text-xl */
+  color: #0bcad4; /* text-cyan-400 */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right .icon {
+  color: #fff; /* text-white */
+  font-size: 20px; /* Adjust icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+  cursor: pointer;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 40px; /* w-10 */
+  height: 20px; /* h-5 */
+  background-color: var(--toggle-bg);
+  border-radius: 20px; /* rounded-full */
+  margin-right: 20px; /* Adjust spacing to the right */
+  cursor: pointer;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  width: 16px; /* w-4 */
+  height: 16px; /* h-4 */
+  background-color: var(--toggle-thumb-light);
+  border-radius: 50%; /* rounded-full */
+  top: 2px; /* top-0.5 */
+  left: 2px; /* left-0.5 */
+  transition: transform 0.3s; /* transition-transform */
+}
+
+body.dark .header {
+  background-color: #d1d5db; /* dark:bg-gray-300 */
+  border-bottom: 1px solid #9ca3af; /* dark:border-gray-400 */
+}
+
+body.dark .header-title {
+  color: #08989b; /* dark:text-cyan-600 */
+}
+
+body.dark .header-right .icon {
+  color: #000; /* dark:text-black */
+}
+
+body.dark .theme-toggle {
+  background-color: #d1d5db; /* dark:bg-gray-300 */
+}
+
+body.dark .theme-toggle-thumb {
+  background-color: var(--toggle-thumb-dark);
+}
+
+
+.charts-section {
+  margin-top: 20px; /* mt-5 */
+  display: grid;
+  gap: 20px; /* gap-5 */
+}
+
+.multi-chart {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.charts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.multi-chart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.chart-container {
+  background-color: #3f3f46; /* bg-gray-700 */
+  padding: 20px; /* p-5 */
+  border-radius: 10px; /* rounded-xl */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-title {
+  text-align: center;
+  margin-bottom: 20px; /* mb-5 */
+  color: #fff;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 24px; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  color: #fff;
+  margin-top: 10px;
+}
+
+body.dark .chart-container {
+  background-color: #d1d5db; /* dark:bg-gray-300 */
+}
+
+body.dark .chart-title {
+  color: #000;
+}
+
+
+
+.text {
+  font-size: 24px; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  color: #fff;
+  margin-top: 10px;
+}
+
+.caption {
+  color: #0bcad4; /* text-cyan-400 */
+  font-weight: 600; /* font-semibold */
+  font-size: 36px; /* text-3xl */
+  margin-top: 20px;
+}
+
+body.dark .caption {
+  color: #08989b; /* dark:text-cyan-600 */
+}
